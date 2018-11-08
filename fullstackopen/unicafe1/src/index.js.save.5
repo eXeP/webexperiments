@@ -1,0 +1,64 @@
+cimport React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+const Otsikko = (props) => {
+  return (
+    <div>
+      <h1>{props.text}</h1>
+    </div>
+  )
+}
+
+const Nappi = (props) => {
+  return (
+    <button onClick={props.onClick}>{props.text}</button>
+  )
+}
+
+const Feedback = (props) => {
+  return (
+    <p>{props.text} {props.value}</p>
+  )
+}
+
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      hyva: 0,
+      neutraali: 0,
+      huono: 0
+    }
+  }
+
+  
+  addOne = (feedback) => () => { 
+    this.setState({ feedback: this.state[feedback]+1 })
+  }
+
+
+  render() {
+  	const laskeKeskiarvo = () => return (this.state.hyva-this.state.huono)/(this.state.hyva+this.state.neutraali+this.state.huono)
+
+    return (
+      <div>
+        <Otsikko text="anna palautetta"/>
+        <div> 
+        	<Nappi text="hyvä" onClick={this.addOne("hyva")}/>
+        	<Nappi text="neutraali" onClick={this.addOne("neutraali")}/>
+        	<Nappi text="huono" onClick={this.addOne("huono")}/>
+        </div>
+        <Otsikko text="statistiikka"/>
+        <div>
+	        <Feedback text="hyvä" value={this.state.hyva}/>
+	        <Feedback text="neutraali" value={this.state.neutraali}/>
+	        <Feedback text="huono" value={this.state.huono}/>
+	        <Feedback text="keskiarvo" value={laskeKeskiarvo()}/>
+      	</div>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))

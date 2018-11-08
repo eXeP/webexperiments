@@ -1,0 +1,80 @@
+cimport React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+const Otsikko = (props) => {
+  return (
+    <div>
+      <h1>{props.text}</h1>
+    </div>
+  )
+}
+
+const Nappi = (props) => {
+  return (
+    <button onClick={props.onClick}>{props.text}</button>
+  )
+}
+
+const Statistics = (props) => {
+	<div>
+		<Otsikko text="statistiikka"/>
+	    <div>
+		    <Feedback text="hyvä" value={props.state.hyva}/>
+		    <Feedback text="neutraali" value={props.state.neutraali}/>
+		    <Feedback text="huono" value={props.state.huono}/>
+		    <Feedback text="keskiarvo" value={props.laskeKeskiarvo()}/>
+		    <Feedback text="positiivisia" value={props.positiivisia()}/>
+	    </div>
+    </div>
+}
+
+const Feedback = (props) => {
+  return (
+    <p>{props.text} {props.value}%</p>
+  )
+}
+
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      hyva: 0,
+      neutraali: 0,
+      huono: 0
+    }
+  }
+
+  
+  addOne = (feedback) => () => {
+  	let newState = this.state
+  	newState[feedback] = newState[feedback]+1
+    this.setState(newState)
+  }
+
+	laskeKeskiarvo2 = () => {
+	  ((this.state.hyva-this.state.huono)/(this.state.hyva+this.state.neutraali+this.state.huono))
+	}
+	positiivisia2 = () => {
+	  ((this.state.hyva)/(this.state.hyva+this.state.neutraali+this.state.huono))
+	}
+
+  render() {
+  	const laskeKeskiarvo = () => ((this.state.hyva-this.state.huono)/(this.state.hyva+this.state.neutraali+this.state.huono))
+  	const positiivisia = () => ((this.state.hyva)/(this.state.hyva+this.state.neutraali+this.state.huono))
+
+    return (
+      <div>
+        <Otsikko text="anna palautetta"/>
+        <div> 
+        	<Nappi text="hyvä" onClick={this.addOne("hyva")}/>
+        	<Nappi text="neutraali" onClick={this.addOne("neutraali")}/>
+        	<Nappi text="huono" onClick={this.addOne("huono")}/>
+        </div>
+        <Statistics state={this.state} laskeKeskiarvo={this.laskeKeskiarvo2} positiivisia={this.positiivisia2}/>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
