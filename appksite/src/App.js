@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './images/appklogo3_med.png';
-import ttlogo from './images/logohigh.png';
+import ttlogo from './images/ic_launcher.png';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -9,7 +9,7 @@ import { faStroopwafel, faArrowRight, faArrowCircleRight } from '@fortawesome/fr
 library.add(faStroopwafel, faArrowRight, faArrowCircleRight)
 const Project = (props) => {
     return (
-      <div class="max-w-sm bg-white mx-auto shadow-md rounded-lg overflow-hidden mb-8 p-2 ml-4 " href={props.link}>
+      <div class="max-w-sm bg-white mx-auto shadow-md rounded-lg overflow-hidden mb-8 p-2 " href={props.link}>
           <div class="sm:flex sm:items-center px-6 py-4">
             <img class="block h-16 sm:h-24 rounded-full mx-auto sm:mb-0 sm:mr-4 sm:ml-0" src={props.img} alt=""></img>
             <div class="text-center sm:text-left sm:flex-grow">
@@ -48,7 +48,7 @@ class App extends Component {
       <div class="flex flex-col items-center justify-center h-screen w-full bg-blue-lightest">
         <div class="max-w-md bg-white mx-auto shadow-md rounded-lg overflow-hidden mb-8 p-4">
           <div class="sm:flex sm:items-center px-6 py-4">
-            <img class="w-64 mx-auto sm:mb-0 sm:mr-4 sm:ml-0" src={logo} alt=""></img>
+            <img class="block h-32 sm:h-24 rounded-full mx-auto sm:mb-0 sm:mr-4 sm:ml-0" src={logo} alt=""></img>
             <div class="text-center sm:text-left sm:flex-grow">
               <div class="mb-4">
                 <p class="text-3xl  leading-tight">APPK Solutions</p>
