@@ -43,6 +43,9 @@ class Projects extends React.Component {
 
 
 class App extends Component {
+  componentDidMount(){
+    document.title = "APPK Solutions"
+  }
   render() {
     return (
       <div class="flex flex-col items-center justify-center h-screen w-full bg-blue-lightest">
