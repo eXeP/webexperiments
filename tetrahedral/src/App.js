@@ -33,12 +33,10 @@ class Projects extends React.Component {
   render() {
     return (
       <div class="flex flex-row flex-wrap items-center justify-center">
-        <Project link="http://taskutaulukot.fi" name="Taskutaulukot" 
-                 desc="Digitaalinen taulukkokirja lukiolaisille" img={tetralogosmall}/>
-                 <Project link="http://taskutaulukot.fi" name="Taskutaulukot" 
-                 desc="Digitaalinen taulukkokirja lukiolaisille" img={tetralogosmall}/>
-                 <Project link="http://taskutaulukot.fi" name="Taskutaulukot" 
-                 desc="Digitaalinen taulukkokirja lukiolaisille" img={tetralogosmall}/>
+        <Project link="" name="GPU programming" 
+                 desc="Harnessing the parallel computing power of GPUs can speed up your application by 100x." img={tetralogosmall}/>
+        <Project link="" name="C++/Assembly implementations" 
+                  desc="High performance thread and instruction-level parallel implementations can offer speedups of 100x." img={tetralogosmall}/>
 
       </div>
   )
@@ -73,6 +71,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <Projects/>
       </div>
     );
   }
