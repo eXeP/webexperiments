@@ -18,8 +18,18 @@
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
+}
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.bg-cover-image {
+  background-image: url("images/algo.jpg");
 }
 
 @keyframes App-logo-spin {
