@@ -79,7 +79,7 @@ class App extends Component {
               <img class="block h-32 sm:h-24 mx-auto sm:mb-0 sm:mr-4 sm:ml-0" src={tetralogosmall} alt=""></img>
               <div class="text-center sm:text-left sm:flex-grow">
                 <div class="mb-4">
-                  <p class="text-3xl  leading-tight">Tetrahedral Solutions</p>
+                  <h1 class="text-3xl leading-tight">Tetrahedral Solutions</h1>
                   <p class="text-lg leading-tight text-grey-dark">We're a technical optimization consultancy based in Otaniemi, Espoo.</p>
                   <p class="text-lg leading-tight text-grey-dark">We have gathered top mathematical and programming talent from <b>Aalto University, Google and Nokia Bell Labs</b> and are doing software performance optimization and algorithmic problem-solving.</p>
                 </div>

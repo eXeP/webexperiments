@@ -18,6 +18,17 @@
   color: white;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-weight: medium;
+}
+
+p {
+  font-weight: light;
+}
 
 .App-link {
   color: #61dafb;
