@@ -30,6 +30,15 @@ p {
   font-weight: light;
 }
 
+.bg-blue-custom {
+  background-image: url("images/tasustasinopt.jpg");
+  color: white;
+}
+
+.bg-white-custom {
+  background-image: url("images/tasustavaaopt.jpg");
+}
+
 .App-link {
   color: #61dafb;
 }
