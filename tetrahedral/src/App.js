@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div class="">
-        <section class="flex flex-row flex-wrap justify-center w-full p-10 md:p-32 bg-blue-custom">
+        <section class="flex flex-row flex-wrap justify-center w-full p-10 sm:pt-32 sm:pb-32 bg-blue-custom">
           <img class="hidden sm:block block h-32 sm:h-24 md:mr-16" src={tetrawhite} alt=""></img>
           <img class="sm:hidden block h-32 sm:h-24 md:mr-16" src={tetrasmall} alt=""></img>
           <div class="max-w-sm md:ml-16 mt-8 xl:mt-0">
@@ -32,7 +32,7 @@ class App extends Component {
             </div>
           </div>
         </section>
-        <section class="flex flex-row flex-wrap justify-center p-4 sm:p-32 bg-white-custom">
+        <section class="flex flex-row flex-wrap justify-center p-4 sm:pt-32 sm:pb-32 bg-white-custom">
           <div class="max-w-sm md:ml-16 mt-8 md:mt-0 p-1">
             <h1 class="mb-6 text-center sm:text-left">We optimize anything</h1>
             <p class="mb-2">Did you know that almost any software written over 10 years ago can be sped up by 90%?</p>
@@ -46,7 +46,7 @@ class App extends Component {
           </div>
         </section>
 
-        <section class="flex flex-row flex-wrap justify-center p-4 sm:p-32 bg-blue-custom">
+        <section class="flex flex-row flex-wrap justify-center p-4 sm:pt-32 sm:pb-32 bg-blue-custom">
           <div class="max-w-sm sm:ml-16 mt-8 sm:mt-0 p-1">
             <h1 class="mb-6 text-center sm:text-left">Parallel programming</h1>
             <p class="mb-2">High performance thread-level and instruction-level parallel implementations can offer speedups of 100x.</p>
