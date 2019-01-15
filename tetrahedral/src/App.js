@@ -23,7 +23,7 @@ class App extends Component {
             <p class="mb-2">We're a technical optimization consultancy based in Otaniemi, Espoo.</p>
             <p class="">Top talent from Aalto University, Google and Nokia Bell Labs, doing software performance optimization and algorithmic problem-solving.</p>
             <div class="text-center sm:text-left">
-              <a  href="mailto:perttu.yli-opas@aalto.fi">
+              <a  href="mailto:team@tetrahedral.solutions">
                 <button class="mt-8 text-xl font-semibold rounded-full
                                    px-4 py-1 leading-normal
                                    border-2 border-white text-white 
